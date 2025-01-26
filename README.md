@@ -18,6 +18,14 @@ This project processes **hexadecimal image data** and converts it into a **grays
 
 - It applies the **luminance formula**:
 
+  ```plaintext
+  gray = (R * 0.299) + (G * 0.587) + (B * 0.114)
+  ```
+
+  - Where **R, G, B** are the red, green, and blue color intensities, respectively.
+  - The coefficients **0.299, 0.587, and 0.114** represent the **relative luminance weight** of each color channel, based on human eye sensitivity.
+  - The formula converts the weighted sum of the color intensities into a **single grayscale value**.
+
 - It iterates through the **RGB data in chunks of 3 bytes (R, G, B)** and computes the grayscale intensity.
 
 - The resulting grayscale values are stored in a `Vec<u8>`.
@@ -34,9 +42,22 @@ This project processes **hexadecimal image data** and converts it into a **grays
 
 A **fully red image** means every pixel in the image has the RGB values:
 
+```plaintext
+(R, G, B) = (255, 0, 0)
+```
+
 Each pixel will be converted to grayscale using the formula:
 
+```plaintext
+Gray = (R * 0.299) + (G * 0.587) + (B * 0.114)
+```
+
 Substituting the values:
+
+```plaintext
+Gray = (255 * 0.299) + (0 * 0.587) + (0 * 0.114)
+Gray = 76.245 ≈ 76
+```
 
 #### **Input (RGB Values):**
 
