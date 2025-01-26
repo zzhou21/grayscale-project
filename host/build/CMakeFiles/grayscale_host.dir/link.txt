@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/grayscale_host.dir/main.c.o -o grayscale_host   -L/home/zzhou21/grayscale-project/host/../../wasm-micro-runtime/samples/basic/build  -Wl,-rpath,/home/zzhou21/grayscale-project/host/../../wasm-micro-runtime/samples/basic/build -lvmlib -ldl -lm 

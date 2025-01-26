@@ -1,0 +1,3 @@
+/home/zzhou21/grayscale-project/host/build/CMakeFiles/grayscale_host.dir
+/home/zzhou21/grayscale-project/host/build/CMakeFiles/edit_cache.dir
+/home/zzhou21/grayscale-project/host/build/CMakeFiles/rebuild_cache.dir
