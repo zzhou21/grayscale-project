@@ -1,3 +1,5 @@
+### The wasm file is under host/build/grayscale_project.wasm
+
 This project processes hexadecimal image data and converts it into a grayscale format using Rust.
 
 How It Works:
