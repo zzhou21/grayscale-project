@@ -5,11 +5,6 @@ This project processes hexadecimal image data and converts it into a grayscale f
 How It Works:
 Hexadecimal Image Processing (process_hex_image)
 
-The function process_hex_image takes a hexadecimal string (as a pointer) and its length.
-It validates the input, extracts the hex data, and converts it into a Vec<u8> byte array.
-The processed data is then passed to the grayscale conversion function.
-RGB to Grayscale Conversion (rgb_to_grayscale)
-
 This function takes RGB pixel data and converts it into a grayscale image.
 It applies the luminance formula:
 gray
