@@ -32,6 +32,7 @@ gray
 0.114
 )
 gray=(R×0.299)+(G×0.587)+(B×0.114)
+
 It iterates through the RGB data in chunks of 3 bytes (R, G, B) and computes the grayscale intensity.
 The resulting grayscale values are stored in a Vec<u8>.
 Default Image Size
