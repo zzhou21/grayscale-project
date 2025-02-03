@@ -1,14 +1,10 @@
 [package]
-name = "grayscale_project"
+name = "image_processor"
 version = "0.1.0"
 edition = "2021"
 
 [lib]
-name = "grayscale_lib"
+name = "image_processor"
 crate-type = ["cdylib"]
 
 [dependencies]
-
-[profile.release]
-opt-level = 2
-lto = false
