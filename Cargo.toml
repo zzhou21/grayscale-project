@@ -3,8 +3,11 @@ name = "image_processor"
 version = "0.1.0"
 edition = "2021"
 
-[lib]
-name = "image_processor"
-crate-type = ["cdylib"]
-
-[dependencies]
+[build]
+rustflags = [
+  "-C", "link-arg=--initial-memory=65536",
+  "-C", "link-arg=-zstack-size=8192",
+  "-C", "link-arg=--export=__heap_base",
+  "-C", "link-arg=--export=__data_end",
+  "-C", "link-arg=--strip-all",
+]
