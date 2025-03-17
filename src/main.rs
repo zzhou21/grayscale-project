@@ -11,10 +11,19 @@ fn panic_handler(_info: &PanicInfo) -> ! {
 #[no_mangle]
 pub extern "C" fn main() {
     // hex to rgb
-    let hex_input = "FF0000FF00FF00FF"; 
+    let hex_input = concat!(
+        "47704C47704C47704C0000FFFFFE04040347704C47704C",
+        "47704C95BF2BA9CB31467AB145194EFEFEF47704C47704C",
+        "47704C9AC32DFFFFF135EA41451941237A0BBCD47704C",
+        "000000FFFFFF49AEADB3D5E7C94265B94FFFFFF040503",
+        "000000FFFFFFFEE404E3D236363531979255485F13000000",
+        "47704CFFFFFFFEF02FF6F6F6F6E6EBF6E6EBF65F861C47704C",
+        "47704C47704CE1E1E1F4F4F4F6F6F678A023FEFEFE47704C",
+        "47704C47704C89B13B00000000000047704C47704CFFFFFF"
+    );
 
     // parse hex
-    let mut data_buf = [0u8; 16];
+    let mut data_buf = [0u8; 256];
     let data_size = parse_hex_fixed(hex_input, &mut data_buf);
 
     // convert to grayscale
